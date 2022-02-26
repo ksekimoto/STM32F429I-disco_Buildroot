@@ -11,7 +11,7 @@ bootstrap:
 	wget -O $(dir_download)/$(archive_buildroot) $(url_buildroot)
 	tar zxvf $(dir_download)/$(archive_buildroot) -C $(dir_buildroot) --strip-components=1
 	cp $(dir_configs)/buildroot $(dir_buildroot)/.config
-	patch --directory=$(dir_buildroot) -p1 < ../buildroot-2018.02.patch 
+	patch --directory=$(dir_buildroot) -p1 < ./buildroot-2018.02.patch 
 
 build:
 	make -j10 -C $(dir_buildroot)
